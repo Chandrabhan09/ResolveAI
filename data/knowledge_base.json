@@ -1,0 +1,132 @@
+{
+  "company": {
+    "name": "NovaStore",
+    "description": "A fictional e-commerce company used for the ResolveAI customer-support demonstration."
+  },
+
+  "policies": [
+    {
+      "id": "shipping_001",
+      "category": "shipping",
+      "title": "Standard Shipping",
+      "keywords": [
+        "shipping",
+        "delivery",
+        "arrive",
+        "package",
+        "shipment"
+      ],
+      "content": "Standard orders are normally delivered within 3 to 7 business days after dispatch."
+    },
+
+    {
+      "id": "tracking_001",
+      "category": "shipping",
+      "title": "Order Tracking",
+      "keywords": [
+        "track",
+        "tracking",
+        "where is my order",
+        "package location",
+        "order status"
+      ],
+      "content": "Customers can use the tracking number provided after dispatch to check the latest available shipment status. ResolveAI does not have direct access to live carrier or order-tracking systems."
+    },
+
+    {
+      "id": "return_001",
+      "category": "returns",
+      "title": "Return Policy",
+      "keywords": [
+        "return",
+        "send back",
+        "return product",
+        "return item"
+      ],
+      "content": "Eligible products may be returned within 30 days of delivery. Items should be returned in their original condition with the included accessories."
+    },
+
+    {
+      "id": "refund_001",
+      "category": "refunds",
+      "title": "Refund Processing",
+      "keywords": [
+        "refund",
+        "money back",
+        "refunded",
+        "refund pending",
+        "refund delay"
+      ],
+      "content": "After an approved return is processed, refunds normally take 5 to 7 business days to appear on the original payment method."
+    },
+
+    {
+      "id": "payment_001",
+      "category": "payments",
+      "title": "Payment Problems",
+      "keywords": [
+        "payment",
+        "card",
+        "charged",
+        "transaction",
+        "payment failed"
+      ],
+      "content": "If a payment fails, customers should verify their payment information and available funds before trying again. ResolveAI cannot access or modify payment details."
+    },
+
+    {
+      "id": "unauthorized_payment_001",
+      "category": "payments",
+      "title": "Unauthorized Transaction",
+      "keywords": [
+        "unauthorized",
+        "unknown charge",
+        "fraud",
+        "stolen card",
+        "did not make",
+        "not my transaction"
+      ],
+      "content": "Suspected unauthorized transactions require human assistance. Customers should avoid sharing complete card numbers, passwords, PINs, or other sensitive authentication information in chat."
+    },
+
+    {
+      "id": "warranty_001",
+      "category": "warranty",
+      "title": "Product Warranty",
+      "keywords": [
+        "warranty",
+        "guarantee",
+        "defective",
+        "manufacturing defect"
+      ],
+      "content": "Eligible products include a 12-month limited warranty covering qualifying manufacturing defects. Accidental damage is not covered by the standard limited warranty."
+    },
+
+    {
+      "id": "account_001",
+      "category": "account",
+      "title": "Account Access",
+      "keywords": [
+        "account",
+        "login",
+        "password",
+        "sign in",
+        "cannot login",
+        "forgot password"
+      ],
+      "content": "Customers who cannot access their account should use the password-reset option associated with their registered email address. ResolveAI cannot view, retrieve, or change customer passwords."
+    },
+
+    {
+      "id": "cancellation_001",
+      "category": "orders",
+      "title": "Order Cancellation",
+      "keywords": [
+        "cancel",
+        "cancel order",
+        "cancellation"
+      ],
+      "content": "An order may be eligible for cancellation before it enters the dispatch process. Once dispatched, the customer may need to follow the applicable return process instead."
+    }
+  ]
+}
