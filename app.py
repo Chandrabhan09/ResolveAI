@@ -7,7 +7,9 @@ from src.components.analytics_dashboard import (
 from src.components.knowledge_dashboard import (
     render_knowledge_dashboard,
 )
-from src.components.settings_dashboard import render_settings_dashboard
+from src.components.settings_dashboard import (
+    render_settings_dashboard,
+)
 from src.components.ticket_dashboard import (
     render_ticket_dashboard,
 )
@@ -20,6 +22,7 @@ from src.memory import (
 from src.support_intelligence import (
     analyze_customer_message,
 )
+from src.ticket import auto_create_ticket
 from src.ui.ai_support import (
     render_ai_hero,
     render_conversation_header,
@@ -317,16 +320,36 @@ YOU
 
     if user_message:
 
+        # -------------------------------------------------
+        # SUPPORT INTELLIGENCE ANALYSIS
+        # -------------------------------------------------
+
         support_data = (
             analyze_customer_message(
                 user_message
             )
         )
 
+        # -------------------------------------------------
+        # AUTOMATIC TICKET CREATION
+        # -------------------------------------------------
+
+        auto_create_ticket(
+            user_message
+        )
+
+        # -------------------------------------------------
+        # STORE USER MESSAGE
+        # -------------------------------------------------
+
         add_message(
             "user",
             user_message,
         )
+
+        # -------------------------------------------------
+        # GENERATE AI RESPONSE
+        # -------------------------------------------------
 
         with st.spinner(
             "ResolveAI is analyzing your request..."
@@ -484,7 +507,9 @@ elif active_page == "Tickets":
         unsafe_allow_html=True,
     )
 
-    st.title("Tickets")
+    st.title(
+        "Tickets"
+    )
 
     st.caption(
         "Review and manage customer support tickets."
@@ -508,7 +533,9 @@ elif active_page == "Knowledge":
         unsafe_allow_html=True,
     )
 
-    st.title("Knowledge")
+    st.title(
+        "Knowledge"
+    )
 
     st.caption(
         "Browse, inspect, and test the verified "
@@ -550,7 +577,9 @@ elif active_page == "Analytics":
         unsafe_allow_html=True,
     )
 
-    st.title("Analytics")
+    st.title(
+        "Analytics"
+    )
 
     st.caption(
         "Monitor support operations, knowledge quality, "
@@ -579,7 +608,6 @@ elif active_page == "Analytics":
     )
 
 
-
 # =========================================================
 # SETTINGS
 # =========================================================
@@ -605,6 +633,8 @@ elif active_page == "Settings":
     st.divider()
 
     render_settings_dashboard()
+
+
 # =========================================================
 # FALLBACK
 # =========================================================
